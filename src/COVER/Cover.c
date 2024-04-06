@@ -10,7 +10,7 @@
 /* include *******************************************************************************************/
 #include "Cover.h"
 /* variable ******************************************************************************************/
-static u_int8_t zuc_COVER_OpenedFlag = Y_OFF;   /* [-,-] COVER_フタ開放フラグ */
+static uint8_t zuc_COVER_OpenedFlag = Y_OFF;   /* [-,-] COVER_フタ開放フラグ */
 /* prototype *****************************************************************************************/
 static void COVER_Init(void);
 static void COVER_JudgeOpened(void);
