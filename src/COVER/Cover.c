@@ -1,5 +1,5 @@
 /**
- * @file Cover.h
+ * @file Cover.c
  * @author ryhoh
  * @brief フタの開閉検出ロジック
  * 
