@@ -7,6 +7,9 @@
  * 
  */
 
+#ifndef __CONFIGURE_H__
+#define __CONFIGURE_H__
+
 /* Compile Switch ***********************************************************************************/
 #define SW_COVER_SW_REDUNDANT           (1)         /* 0:No Redundunt 1:Redundunt                   */
 #define SW_BUZZER_NUM                   (4)         /* Number of buzzers installed                  */
@@ -21,3 +24,5 @@
 #define PIN_DIP_SW_BIT0                 (D8)         /* DIP Switch Bit0                             */
 #define PIN_DIP_SW_BIT1                 (D7)         /* DIP Switch Bit1                             */
 /* **************************************************************************************************/
+
+#endif /* __CONFIGURE_H__ */

@@ -7,6 +7,9 @@
  * 
  */
 
+#ifndef __SYSTEMCONTROL_H__
+#define __SYSTEMCONTROL_H__
+
 /* include *******************************************************************************************/
 #include <Arduino.h>
 
@@ -23,3 +26,5 @@ void SYSCTL_Main(void);
 uint8_t SYSCTL_GetControlState(void);
 uint32_t SYSCTL_GetSelectedScoreIdx(void);
 /* ***************************************************************************************************/
+
+#endif /* __SYSTEMCONTROL_H__ */
