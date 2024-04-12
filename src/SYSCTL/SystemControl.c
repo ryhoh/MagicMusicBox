@@ -38,7 +38,7 @@ static void SYSCTL_Input(
     uint8_t *const puc_cover_opened_flag        /* [-,-] フタ開放フラグ */
 ) {
     *puc_cover_opened_flag = COVER_GetOpenedFlag();                 /* フタ開放フラグ */
-    zul_SYSCTL_SelectedScoreIdx = NW_GetSelectedScoreIdx();         /* 選択曲インデックス */
+    zul_SYSCTL_SelectedScoreIdx = DIP_GetSwitchState();             /* DIPスイッチ状態を選択曲インデックスにラッチ */
 }
 
 /**

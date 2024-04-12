@@ -12,6 +12,8 @@
 
 #include "../common.h"
 #include "../configure.h"
+#include "../DIP/DIP.h"
+#include "../Cover/Cover.h"
 /* define ********************************************************************************************/
 #define Y_SYSCTL_CONTROL_STATE_BOOT         (0)         /* 初期状態 */
 #define Y_SYSCTL_CONTROL_STATE_SLEEP        (1)         /* スリープ状態 */
