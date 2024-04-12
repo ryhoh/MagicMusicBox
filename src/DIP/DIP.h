@@ -1,7 +1,7 @@
 /**
- * @file Network.h
+ * @file DIP.h
  * @author ryhoh
- * @brief ネットワークによる曲選択ロジック
+ * @brief DIPスイッチ入力の処理を行う
  * 
  * @copyright Copyright (c) 2024
  * 
@@ -13,6 +13,6 @@
 #include "../common.h"
 #include "../configure.h"
 /* function ******************************************************************************************/
-void NW_Main(void);
-uint32_t NW_GetSelectedScoreIdx(void);
+void DIP_Main(void);
+uint32_t DIP_GetSwitchState(void);
 /* ***************************************************************************************************/

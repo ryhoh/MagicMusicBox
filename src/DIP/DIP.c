@@ -1,23 +1,23 @@
 /**
- * @file Network.c
+ * @file DIP.c
  * @author ryhoh
- * @brief ネットワークによる曲選択ロジック
+ * @brief DIPスイッチ入力の処理を行う
  * 
  * @copyright Copyright (c) 2024
  * 
  */
 
 /* include *******************************************************************************************/
-#include "Network.h"
+#include "DIP.h"
 /* variable ******************************************************************************************/
-static uint32_t zul_NW_SelectedScoreIdx = 0;   /* [-,-] NW_選択曲インデックス */
+static uint8_t zuc_DIP_SwitchState = 0;   /* [-,-] DIP_DIPスイッチ状態 */
 /* prototype *****************************************************************************************/
 /* function ******************************************************************************************/
 /* Interface *****************************************************************************************/
 /**
- * @brief NW_選択曲インデックス取得
+ * @brief DIP_DIPスイッチ状態取得
  * 
  */
-uint32_t NW_GetSelectedScoreIdx(void) {
-    return zul_NW_SelectedScoreIdx;
+uint8_t DIP_GetSwitchState(void) {
+    return zuc_DIP_SwitchState;
 }
