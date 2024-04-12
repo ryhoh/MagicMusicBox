@@ -30,11 +30,20 @@ static void SCORE_SelectScore(void);
  * 
  */
 void SCORE_Main(void) {
-    /* 楽譜選択処理 */
-    SCORE_SelectScore();
+    uint8_t uc_control_state = SYSCTL_GetControlState();    /* [-,-] 制御状態 */
+    static uint8_t zuc_control_state_old;                    /* [-,-] 制御状態(前回値) */
 
-    /* 曲の長さ算出処理 */
-    SCORE_CalcScoreFullTime();
+    /* スリープ以外の状態からスリープに移行したときのみ実行 */
+    if ((zuc_control_state_old != Y_SYSCTL_CONTROL_STATE_SLEEP)
+     && (uc_control_state == Y_SYSCTL_CONTROL_STATE_SLEEP)) {
+        /* 楽譜選択処理 */
+        SCORE_SelectScore();
+
+        /* 曲の長さ算出処理 */
+        SCORE_CalcScoreFullTime();
+    }
+
+    zuc_control_state_old = uc_control_state;    /* 制御状態(前回値)を更新 */
 }
 
 /**
